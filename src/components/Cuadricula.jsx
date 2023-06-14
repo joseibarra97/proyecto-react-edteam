@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import "./App.css"
-import Cripto from "./Cripto"
+import "./Cuadricula.css"
+import Cripto from "./cripto/Cripto"
 
 /*
   PETICIONES A UNA API DE TIPO GET
@@ -12,7 +12,7 @@ import Cripto from "./Cripto"
     * Por ultimo .catch() se ejecutara en caso de que la peticion falle y nos mostrara la accion que le indiquemos, en este caso un console.error()
 
 */
-function App() {
+function Cuadricula() {
   
   // El useState() va almacenar la informacion que se encuentre en la data que nos regresa el .then() del fetch()
 
@@ -63,6 +63,7 @@ function App() {
               priceUsd={priceUsd} 
               symbol={symbol} 
               changePercent24Hr={changePercent24Hr} 
+              id={id}
             /> 
           ))
         }
@@ -71,4 +72,4 @@ function App() {
   )
 }
 
-export default App
+export default Cuadricula
