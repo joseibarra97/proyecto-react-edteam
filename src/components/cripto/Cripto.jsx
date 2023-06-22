@@ -14,6 +14,7 @@ const Cripto = ({id, name, priceUsd, symbol, changePercent24Hr}) => {
                         {parseFloat(changePercent24Hr).toFixed(3)}%
                     </span>
                 </p>
+                <br />
                 <Link to={`/criptomonedas/${id}`}>Ver detalles</Link>
             </div>
         </div>
