@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import "./Menu.css"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../../context/UserContext"
@@ -9,6 +9,8 @@ import { UserContext } from "../../context/UserContext"
 
 const Menu = () => {
 
+    const navigation = useNavigate()
+
     const usuario = useContext(UserContext)
 
     return (
@@ -17,6 +19,10 @@ const Menu = () => {
                 <li><NavLink to="/">Inicio</NavLink></li>
                 <li><NavLink to="/criptomonedas">Lista de criptos</NavLink></li>
                 <li><NavLink to="/perfil">Perfil de { usuario.name }</NavLink></li>
+                <li><a onClick={() => {
+                    localStorage.removeItem("tokenCriptoInfo")
+                    navigation("/login")
+                }}>Cerrar sesión</a></li>
             </ul>
         </nav>
     )

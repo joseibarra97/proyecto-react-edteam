@@ -5,15 +5,19 @@
   }
   
 .main-menu ul {
-display: flex;
+  display: flex;
 }
 
 .main-menu li {
-list-style: none;
-margin-right: 2rem;
+  list-style: none;
+  margin-right: 2rem;
 }
 
 .main-menu a {
-color: white;
-text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
