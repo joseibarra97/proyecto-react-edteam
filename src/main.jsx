@@ -25,11 +25,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Routes>
             {/* Para optimizar aun mas nuestra pagina, debemos hacer uso del componente <Outlet /> que colocamos en el archivo App.jsx esto nos permite crear un nuevo componente padre aqui el cual tiene el inicio como path='/' y de element={<App />} en ese archivo App.jsx se agrega el menu para evitar que este sea cargado siempre aqui */}
 
-                <Route path='/' element={<Home />}/>
-
                 <Route path='/' element={<App />}>
                     <Route path='perfil' element={<Perfil />}/>
                 </Route>
+                
+                <Route path='/' element={<Home />}/>
+
+                
 
                 <Route path='/criptomonedas' element={<App />}>
                     <Route index element={<Cuadricula />}/>
