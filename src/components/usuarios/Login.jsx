@@ -38,12 +38,12 @@ const Login = () => {
     return (
         <div className="login-container">
             <h1>Login</h1>
-            <h3>Esta es solo una pagina de prueba, utiliza el siguiente correo y contraseña para acceder</h3>
+            {/* <h3>Esta es solo una pagina de prueba, utiliza el siguiente correo y contraseña para acceder</h3>
             <div className="accesos">
                 <span className="usuario">Correo:</span> eve.holt@reqres.in 
                 <br />
                 <span className="usuario">Contraseña:</span> cityslicka
-            </div>
+            </div> */}
             <form onSubmit={submit}>
                 <div className="field">
                     <label htmlFor="email">Correo Electronico</label>
